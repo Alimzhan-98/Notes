@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="title_activity_navigation_activyty">NavigationActivyty</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+
+    <string name="title_task">Tasks</string>
+    <string name="title_note">Notes</string>
+
+</resources>
