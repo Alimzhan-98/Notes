@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".NavigationActivyty"
+            android:name=".navigation.NavigationActivyty"
             android:label="@string/title_activity_navigation_activyty">
 
             <intent-filter >

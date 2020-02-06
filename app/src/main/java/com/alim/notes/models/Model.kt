@@ -1,12 +1,10 @@
-package com.alim.notes
-
-import android.accounts.AuthenticatorDescription
+package com.alim.notes.models
 
 
 data class Task @JvmOverloads constructor(
-   var title: String,
-   val todos: MutableList<Todo> = mutableListOf(),
-   var tags:  Tag? = null
+        var title: String,
+        val todos: MutableList<Todo> = mutableListOf(),
+        var tags:  Tag? = null
 )
 
 
