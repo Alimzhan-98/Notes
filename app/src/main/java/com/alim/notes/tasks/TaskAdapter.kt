@@ -8,6 +8,7 @@ import com.alim.notes.R
 import com.alim.notes.foundations.BaseRecyclerAdapter
 import com.alim.notes.models.Task
 import kotlinx.android.synthetic.main.item_task.view.*
+import kotlinx.android.synthetic.main.view_todo.view.*
 
 class TaskAdapter(
         private val taskList: MutableList<Task> = mutableListOf()
@@ -24,7 +25,11 @@ class TaskAdapter(
             view.titleView.text = data.title
 
             data.todos.forEach{ todo ->
-                LayoutInflater.from(view.context).inflate(R.layout.view_todo,view.todoContainer,false)
+               val todoView =  LayoutInflater.from(view.context).inflate(R.layout.view_todo,view.todoContainer,false).apply {
+                   this.descriptionView.text = todo.description
+                   this.completeCheckBox.isChecked = todo.isComplete
+               }
+               view.todoContainer.addView(todoView)
             }
 
             
