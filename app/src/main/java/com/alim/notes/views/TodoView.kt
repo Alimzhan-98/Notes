@@ -15,17 +15,19 @@ class TodoView @JvmOverloads constructor(
         attrs: AttributeSet? = null,
         defStyleAttr: Int = 1) : ConstraintLayout(context) {
 
-    fun initView(todo: Todo) {
+    fun initView(todo: Todo,callback: (() -> Unit)? = null) {
         descriptionView.setText(todo.description)
         completeCheckBox.setChecked(todo.isComplete)
         if (todo.isComplete) {
             createStrikeThought()
         }
-        setUpCheckStateListener()
+        setUpCheckStateListener(todo,callback)
     }
 
-    fun setUpCheckStateListener() {
+    fun setUpCheckStateListener(todo: Todo,callback: (() -> Unit)? = null) {
         completeCheckBox.setOnCheckedChangeListener { _, isChecked: Boolean ->
+            todo.isComplete = isChecked
+            callback?.invoke()
             if (isChecked) {
                 createStrikeThought()
             } else {

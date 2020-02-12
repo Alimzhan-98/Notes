@@ -23,11 +23,9 @@
         android:id="@+id/descriptionView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/completeCheckBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/completeCheckBox"
+        app:layout_constraintBaseline_toBaselineOf="@id/completeCheckBox"
         app:layout_constraintTop_toTopOf="@id/completeCheckBox"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@id/completeCheckBox"
         android:layout_marginStart="@dimen/item_margin_default"
         android:layout_marginTop="@dimen/item_margin_default"
         tools:text="Hello World!" />

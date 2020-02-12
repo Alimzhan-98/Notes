@@ -34,7 +34,11 @@ class TasksListFragment : Fragment() {
         val adapter = TaskAdapter(mutableListOf(
                 Task("Task1", mutableListOf(Todo("Todo1"),
                         Todo("Todo1.2",true))),
-                Task("Task2")
+                Task("Task2", mutableListOf(
+                        Todo("Todo 2.1",true),
+                        Todo("Todo 2.2",true),
+                        Todo("Todo 2.3",true)
+                ))
         ))
 
         recyclerView.adapter = adapter
