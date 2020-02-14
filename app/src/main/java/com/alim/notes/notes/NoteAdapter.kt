@@ -17,11 +17,12 @@ class NoteAdapter(
 ) : BaseRecyclerAdapter<Note>(noteList) {
 
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
             = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false))
 
 
-    class ViewHolder(view: View): BaseRecyclerAdapter.BaseViewHolder<Note>(view) {
+    class ViewHolder(view: View): BaseViewHolder<Note>(view) {
         override fun onBind(note: Note){
             (view as NoteView).initView(note)
         }

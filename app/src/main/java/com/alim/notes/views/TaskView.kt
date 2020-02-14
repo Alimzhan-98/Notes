@@ -36,8 +36,6 @@ class TaskView@JvmOverloads constructor(
         }
 
 
-
-
     }
 
     fun checkTaskComplete() {

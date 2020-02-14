@@ -6,12 +6,12 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/item_margin_default"
     android:background="@color/colorPrimary"
-
+    android:elevation="@dimen/evaluation_default"
     >
 
     <TextView
         android:id="@+id/textView"
-        tools:text="Sample Text"
+        android:text="Add New Task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"

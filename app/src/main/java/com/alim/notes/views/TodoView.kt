@@ -22,6 +22,7 @@ class TodoView @JvmOverloads constructor(
             createStrikeThought()
         }
         setUpCheckStateListener(todo,callback)
+
     }
 
     fun setUpCheckStateListener(todo: Todo,callback: (() -> Unit)? = null) {
