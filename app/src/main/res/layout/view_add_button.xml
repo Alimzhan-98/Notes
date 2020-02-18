@@ -10,7 +10,7 @@
     >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/buttonText"
         android:text="Add New Task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

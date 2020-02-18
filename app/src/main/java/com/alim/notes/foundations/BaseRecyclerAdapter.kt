@@ -3,6 +3,7 @@ package com.alim.notes.foundations
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.alim.notes.notes.NoteAdapter
 import com.alim.notes.tasks.TaskAdapter
 
 abstract class BaseRecyclerAdapter<T>(
@@ -21,7 +22,10 @@ abstract class BaseRecyclerAdapter<T>(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if(holder is TaskAdapter.AddButtonViewHolder){
           holder.onBind(Unit)
-        }else{
+        }else if(holder is NoteAdapter.AddButtonViewHolder) {
+          holder.onBind(Unit)
+        }
+        else{
             (holder as BaseViewHolder<T>).onBind(mutableList[position])
         }
     }
